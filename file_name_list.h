@@ -4,7 +4,7 @@
 
 #include <filesystem>
 #include<vector>
-#include<iostream>
+#include<string>
 
 using namespace std;
 
@@ -32,7 +32,7 @@ namespace sakado {
 
 		void FileNameList_Private(string targetPath) {
 			Path = targetPath;
-			//ディレクトリ直下に含まれる全ファイル
+			//繝�繧｣繝ｬ繧ｯ繝医Μ逶ｴ荳九↓蜷ｫ縺ｾ繧後ｋ蜈ｨ繝輔ぃ繧､繝ｫ
 			for (const filesystem::directory_entry& x : filesystem::directory_iterator(targetPath)) {
 				if (x.is_directory()) {
 					DirNames.push_back(x.path().filename().string());
