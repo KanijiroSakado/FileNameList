@@ -18,4 +18,6 @@ int main() {
 	
 	int dummy;
 	cin >> dummy;
+	
+	return 0;
 }
