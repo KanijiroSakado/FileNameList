@@ -1,6 +1,6 @@
-#ifdef FILE_NAME_LIST_H
+#ifdef SAKADO_FILE_NAME_LIST_H
 #else
-#define FILE_NAME_LIST_H
+#define SAKADO_FILE_NAME_LIST_H
 
 #include <filesystem>
 #include<vector>
