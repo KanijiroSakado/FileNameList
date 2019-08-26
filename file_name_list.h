@@ -44,7 +44,7 @@ namespace sakado {
 				}
 			}
 			for (string str : DirNames) {
-				Dirs.push_back(*(new FileNameList(targetPath + "/" + str)));
+				Dirs.push_back(FileNameList(targetPath + "/" + str));
 			}
 		}
 
