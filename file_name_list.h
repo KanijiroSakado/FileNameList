@@ -35,12 +35,18 @@ namespace sakado {
 			//ディレクトリ直下に含まれる全ファイル
 			for (const filesystem::directory_entry& x : filesystem::directory_iterator(targetPath)) {
 				if (x.is_directory()) {
-					DirNames.push_back(x.path().filename().string());
-					DirPath.push_back(Path + "/" + x.path().filename().string());
+					try{//とりあえずエラー引っかかってもスルーで対応します
+						DirNames.push_back(x.path().filename().string());
+						DirPath.push_back(Path + "/" + x.path().filename().string());
+					}
+					catch(...){}
 				}
 				else {
-					FileNames.push_back(x.path().filename().string());
-					FilePath.push_back(Path + "/" + x.path().filename().string());
+					try{//とりあえずエラー引っかかってもスルーで対応します
+						FileNames.push_back(x.path().filename().string());
+						FilePath.push_back(Path + "/" + x.path().filename().string());
+					}
+					catch(...){}
 				}
 			}
 			for (string str : DirNames) {
